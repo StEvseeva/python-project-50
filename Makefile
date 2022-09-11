@@ -1,7 +1,7 @@
 install:
 	poetry install
 
-gendiff:
+run-gendiff:
 	poetry run gendiff
 
 lint:
@@ -18,4 +18,3 @@ package-install:
 
 package-reinstall:
 	python3 -m pip install --user --force-reinstall dist/*.whl
-
