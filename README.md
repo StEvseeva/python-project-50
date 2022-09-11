@@ -9,3 +9,9 @@
 Вычислитель отличий
 
 Учебный проект -- скрипт, запускающийся из командной строки и вычисляющий отличия между двумя файлами. На данный момент работает только с JSON.
+
+### Asciinema of how gendiff work with json
+[![asciicast](https://asciinema.org/a/520311.svg)](https://asciinema.org/a/520311)
+
+### Asciinema of how gendiff work with yaml
+[![asciicast](https://asciinema.org/a/520310.svg)](https://asciinema.org/a/520310)
