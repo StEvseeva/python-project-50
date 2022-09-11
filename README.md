@@ -5,6 +5,7 @@
 [![tests](https://github.com/StEvseeva/python-project-50/actions/workflows/tests.yml/badge.svg)](https://github.com/StEvseeva/python-project-50/actions/workflows/tests.yml)
 
 ###DESCRIPTION:
+
 Вычислитель отличий
 
 Учебный проект -- скрипт, запускающийся из командной строки и вычисляющий отличия между двумя файлами. На данный момент работает только с JSON.
