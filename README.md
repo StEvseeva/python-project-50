@@ -4,7 +4,7 @@
 ### Tests status:
 [![tests](https://github.com/StEvseeva/python-project-50/actions/workflows/tests.yml/badge.svg)](https://github.com/StEvseeva/python-project-50/actions/workflows/tests.yml)
 
-###DESCRIPTION:
+### DESCRIPTION:
 
 Вычислитель отличий
 
