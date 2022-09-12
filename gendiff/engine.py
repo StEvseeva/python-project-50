@@ -9,7 +9,7 @@ def run_gendiff(file_path1, file_path2):
     file1 = parse(normpath(file_path1))
     file2 = parse(normpath(file_path2))
 
-    print(generate_diff(file1, file2))
+    print(stylish(generate_diff(file1, file2)))
 
 
 def parse(file_path):
@@ -36,7 +36,13 @@ def generate_diff(data1, data2):
     if data2:
         diff.update({f'+ {key}': item for key, item in data2.items()})
 
-    sorted_diff = dict(sorted(diff.items(), key=lambda x: x[0][2:]))
+    return diff
+
+
+def stylish(data):
+
+    sorted_diff = dict(sorted(data.items(), key=lambda x: x[0][2:]))
 
     return (str(json.dumps(sorted_diff, indent=2,
                            separators=('', ': ')))).replace('"', '')
+
