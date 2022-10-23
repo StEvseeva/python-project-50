@@ -4,6 +4,9 @@
 ### Tests status:
 [![tests](https://github.com/StEvseeva/python-project-50/actions/workflows/tests.yml/badge.svg)](https://github.com/StEvseeva/python-project-50/actions/workflows/tests.yml)
 
+### Codeclimat:
+[![Maintainability](https://api.codeclimate.com/v1/badges/9a3bf69ecaf01b3a32b6/maintainability)](https://codeclimate.com/github/StEvseeva/python-project-50/maintainability)
+
 ### DESCRIPTION:
 
 Вычислитель отличий
