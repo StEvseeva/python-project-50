@@ -2,7 +2,7 @@ import json
 import yaml
 from yaml.loader import SafeLoader
 from os.path import normpath
-from gendiff.formaters import stylish, plain
+from gendiff.stylish import json_format, plain_format
 
 
 def run_gendiff(file_path1, file_path2, form):
@@ -10,7 +10,7 @@ def run_gendiff(file_path1, file_path2, form):
     file1 = parse(normpath(file_path1))
     file2 = parse(normpath(file_path2))
 
-    format_name = stylish if form == 'stylish' else plain
+    format_name = json_format if form == 'json' else plain_format
     format_name(generate_diff(file1, file2))
 
 

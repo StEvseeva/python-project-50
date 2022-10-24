@@ -1,12 +1,12 @@
 import json
 
 
-def stylish(tree):
+def json_format(tree):
     print((str(json.dumps(
         tree, indent=2, separators=('', ': ')))).replace('"', ''))
 
 
-def plain(tree={}, parent=[]):
+def plain_format(tree={}, parent=[]):
     maximum = len(tree) - 1
     prev_item = None
     prev_node = None
@@ -15,9 +15,10 @@ def plain(tree={}, parent=[]):
         current_node = '.'.join(parent)
         item = tree[key]
         meaning = key[0]
-        value = '[complex value]' if isinstance(item, dict) else normalize_value(item)
+        value = '[complex value]' if isinstance(item, dict) \
+            else normalize_value(item)
         if meaning == ' ' and isinstance(item, dict):
-            plain(item, parent)
+            plain_format(item, parent)
         elif meaning == '-':
             if key != maximum:
                 if prev_node:
@@ -29,14 +30,17 @@ def plain(tree={}, parent=[]):
         elif meaning == '+':
             if prev_node:
                 if prev_node == current_node:
-                    print(f'''Property '{current_node}' was updated. From {prev_item} to {value}''')
+                    print(f'''Property '{current_node}' was updated.''',
+                          f'''From {prev_item} to {value}''')
                 else:
                     print(f'''Property '{prev_node}' was removed''')
-                    print(f"""Property '{current_node}' was added with value: {value}""")
+                    print(f"""Property '{current_node}'""",
+                          f"""was added with value: {value}""")
                 prev_item = None
                 prev_node = None
             else:
-                print(f"""Property '{current_node}' was added with value: {value}""")
+                print(f"""Property '{current_node}'""",
+                      f"""was added with value: {value}""")
         parent.pop(-1)
 
 

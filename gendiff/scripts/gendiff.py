@@ -9,7 +9,7 @@ def main():
     parser.add_argument('first_file', type=str)
     parser.add_argument('second_file', type=str)
     parser.add_argument("-f", "--format", metavar="FORMAT",
-                        help='set format of output', default="stylish", type=str)
+                        help='set format of output', default="json", type=str)
 
     args = vars(parser.parse_args())
     file1 = args['first_file']

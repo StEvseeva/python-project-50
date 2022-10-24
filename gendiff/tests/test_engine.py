@@ -1,5 +1,5 @@
-from gendiff.engine import generate_diff, parse, run_gendiff
-from gendiff.formaters import plain
+from gendiff.engine import generate_diff, parse
+from gendiff.stylish import plain_format
 import os
 import pytest
 
@@ -7,9 +7,9 @@ import pytest
 @pytest.fixture
 def flat_answer():
     return (parse(os.path.join('gendiff',
-                              'tests',
-                              'fixtures',
-                              'flat_answer.json')))
+                               'tests',
+                               'fixtures',
+                               'flat_answer.json')))
 
 
 @pytest.fixture
@@ -86,10 +86,8 @@ def test_generate_giff_deep(deep_answer):
 
 
 def test_plain_format(capfd, deep_answer):
-    plain(deep_answer)
+    plain_format(deep_answer)
     out, err = capfd.readouterr()
-    expected_out = open(os.path.join('gendiff',
-                                 'tests',
-                                 'fixtures',
-                                 'plain_answer')).read()
+    expected_out = open(os.path.join('gendiff', 'tests',
+                                     'fixtures', 'plain_answer')).read()
     assert out == expected_out

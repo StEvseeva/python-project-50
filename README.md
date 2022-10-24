@@ -22,5 +22,5 @@
 ### Asciinema of how gendiff work with deep files
 [![asciicast](https://asciinema.org/a/531589.svg)](https://asciinema.org/a/531589)
 
-### Asciinema of stylish and plain formats
-[![asciicast](https://asciinema.org/a/531587.svg)](https://asciinema.org/a/531587)
+### Asciinema of json and plain formats
+[![asciicast](https://asciinema.org/a/531598.svg)](https://asciinema.org/a/531598)
