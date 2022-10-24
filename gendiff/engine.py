@@ -2,14 +2,16 @@ import json
 import yaml
 from yaml.loader import SafeLoader
 from os.path import normpath
+from gendiff.formaters import stylish, plain
 
 
-def run_gendiff(file_path1, file_path2):
+def run_gendiff(file_path1, file_path2, form):
 
     file1 = parse(normpath(file_path1))
     file2 = parse(normpath(file_path2))
 
-    stylish(generate_diff(file1, file2))
+    format_name = stylish if form == 'stylish' else plain
+    format_name(generate_diff(file1, file2))
 
 
 def parse(file_path):
@@ -41,9 +43,3 @@ def generate_diff(data1, data2):
     sorted_diff = dict(sorted(diff.items(), key=lambda x: x[0][2:]))
 
     return sorted_diff
-
-
-def stylish(tree):
-
-    print((str(json.dumps(
-        tree, indent=2, separators=('', ': ')))).replace('"', ''))

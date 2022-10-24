@@ -18,3 +18,9 @@
 
 ### Asciinema of how gendiff work with yaml
 [![asciicast](https://asciinema.org/a/520310.svg)](https://asciinema.org/a/520310)
+
+### Asciinema of how gendiff work with deep files
+[![asciicast](https://asciinema.org/a/531589.svg)](https://asciinema.org/a/531589)
+
+### Asciinema of stylish and plain formats
+[![asciicast](https://asciinema.org/a/531587.svg)](https://asciinema.org/a/531587)
